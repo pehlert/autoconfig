@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clientConfig version="1.1">
+  <emailProvider id="hostzero.com">
+    <domain>hostzero.com</domain>
+    <domain>hostzero.de</domain>
+    <displayName>Hostzero Mail</displayName>
+    <displayShortName>Hostzero</displayShortName>
+    <incomingServer type="imap">
+      <hostname>mail.hostzero.com</hostname>
+      <port>993</port>
+      <socketType>SSL</socketType>
+      <username>%EMAILADDRESS%</username>
+      <authentication>password-cleartext</authentication>
+    </incomingServer>
+    <incomingServer type="imap">
+      <hostname>mail.hostzero.com</hostname>
+      <port>143</port>
+      <socketType>STARTTLS</socketType>
+      <username>%EMAILADDRESS%</username>
+      <authentication>password-cleartext</authentication>
+    </incomingServer>
+    <outgoingServer type="smtp">
+      <hostname>mail.hostzero.com</hostname>
+      <port>587</port>
+      <socketType>STARTTLS</socketType>
+      <username>%EMAILADDRESS%</username>
+      <authentication>password-cleartext</authentication>
+    </outgoingServer>
+    <documentation url="https://webmail.hostzero.com/">
+      <descr lang="en">Hostzero Webmail</descr>
+      <descr lang="de">Hostzero Webmail</descr>
+    </documentation>
+  </emailProvider>
+</clientConfig>
